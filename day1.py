@@ -48,7 +48,7 @@ for move in moves:
         points_visited = [(i, blocks_easting) for i in range(blocks_northing_prev+offset, blocks_northing+offset, offset)]
     else:
         blocks_easting_prev = blocks_easting
-        offset = (EASTINGS.index(current_direction) - 1) 
+        offset = EASTINGS.index(current_direction) - 1
         blocks_easting += offset * move_count
         points_visited = [(blocks_northing, i) for i in range(blocks_easting_prev+offset, blocks_easting+offset, offset)]
     
@@ -59,7 +59,7 @@ for move in moves:
 
     for point in points_visited:
         if point in visits:
-            print("*** Part 2 answer is found, keep going to find Part 1 answer. ***")
+            # Part 2 answer is found, keep going to find Part 1 answer.
             part_two_answer = "Final answer for Part 2: %d blocks away in total, first visited %d blocks in north-south direction and %d blocks in east-west direction twice." % (abs(point[0]) + abs(point[1]), point[0], point[1]) 
             break
 
