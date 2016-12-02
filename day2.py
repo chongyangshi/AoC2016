@@ -5,6 +5,7 @@
 ###################################
 # By icydoge <icydoge@gmail.com>  #
 ###################################
+
 KEYBOARD = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 KEYBOARD2 = [[None, None, '1', None, None], [None, '2', '3', '4', None], ['5', '6', '7', '8', '9'], [None, 'A', 'B', 'C', None], [None, None, 'D', None, None]]
 MOVES = {'U': [-1, 0], 'D': [1, 0], 'L': [0, -1], 'R': [0, 1]}
@@ -45,6 +46,7 @@ current_key = 5
 current_row = 2
 current_col = 0
 passcode = ""
+
 for instruction in instructions:
     for direction in instruction:
         current_row, current_col = request_move(current_row + MOVES[direction][0], current_col + MOVES[direction][1], current_row, current_col, 4, KEYBOARD2)
