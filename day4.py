@@ -12,10 +12,12 @@ from collections import Counter
 ALPHABET = string.ascii_lowercase
 REVERSE_ALPHABET = list(reversed(string.ascii_lowercase))
 
+
 def most_common_5(strin):
     data = Counter(strin)
     commons = data.most_common(None)
     return sorted(commons, key=lambda x: (x[1], REVERSE_ALPHABET.index(x[0])))[-5:]
+
 
 def rotate_letter(char, offset):
     char = char.lower()
@@ -26,7 +28,7 @@ with open("inputs/day4-1.txt") as f:
     content = f.readlines()
 
 # Preprocessing
-lines = list(map(str.strip, content)) # Precautionary in this case.
+lines = list(map(str.strip, content))  # Precautionary in this case.
 rooms = []
 for line in lines:
     split = line.split('-')
