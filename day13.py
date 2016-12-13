@@ -15,7 +15,8 @@ PART_TWO_LOCATIONS = 50
 
 puzzle_input = int(input("Enter your puzzle input: "))
 
-num_values = [[puzzle_input + x*x + 3*x + 2*x*y + y + y*y for x in range(X + 2)] for y in range(Y + 2)]
+num_values = [[puzzle_input + x * x + 3 * x + 2 * x * y +
+               y + y * y for x in range(X + 2)] for y in range(Y + 2)]
 
 for y in range(Y + 2):
     for x in range(X + 2):
@@ -26,7 +27,7 @@ for y in range(Y + 2):
             num_values[y][x] = -1
 
 # Point, previous distance.
-routing_queue = [[(1,1), 0]]
+routing_queue = [[(1, 1), 0]]
 visited_points = []
 part_two_reached = 0
 
@@ -50,21 +51,21 @@ while len(routing_queue) > 0:
         continue
     else:
         visited_points.append(current_point)
-        if current_distance <= 50:
+        if current_distance <= PART_TWO_LOCATIONS:
             part_two_reached += 1
 
     # Add new route points, sorry for the ugly code.
     if x > 0:
-        if num_values[y][x-1] > 0:
-            routing_queue.append([(x-1, y), current_distance + 1])
+        if num_values[y][x - 1] > 0:
+            routing_queue.append([(x - 1, y), current_distance + 1])
     if y > 0:
-        if num_values[y-1][x] > 0:
-            routing_queue.append([(x, y-1), current_distance + 1])
+        if num_values[y - 1][x] > 0:
+            routing_queue.append([(x, y - 1), current_distance + 1])
     if x < X:
-        if num_values[y][x+1] > 0:
-            routing_queue.append([(x+1, y), current_distance + 1])
+        if num_values[y][x + 1] > 0:
+            routing_queue.append([(x + 1, y), current_distance + 1])
     if y < Y:
-        if num_values[y+1][x] > 0:
-            routing_queue.append([(x, y+1), current_distance + 1])
+        if num_values[y + 1][x] > 0:
+            routing_queue.append([(x, y + 1), current_distance + 1])
 
 print("Final answer for Part 2: %d" % (part_two_reached))
