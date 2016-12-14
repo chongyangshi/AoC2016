@@ -25,31 +25,30 @@ with open("inputs/day2-1.txt") as f:
     content = f.read()
 
 lines = list(content.split())
-instructions = map(list, lines)
+instructions = list(map(list, lines))
 
-# Part 1
-current_key = 5
-current_row = 1
-current_col = 1
-passcode = ""
+# Part 1, 2
 
-for instruction in instructions:
-    for direction in instruction:
-        current_row, current_col = request_move(current_row + MOVES[direction][0], current_col + MOVES[direction][1], current_row, current_col, 2, KEYBOARD)
-    passcode += str(KEYBOARD[current_row][current_col])
+for part in [1, 2]:
 
-print("Final answer for Part 1: %s" % (passcode))
+    current_key = 5
+    passcode = ""
 
+    if part == 1:
+        current_row = 1
+        current_col = 1
+        board_size = 2
+        keyboard = KEYBOARD
+    else:
+        current_row = 2
+        current_col = 0
+        board_size = 4
+        keyboard = KEYBOARD2
 
-# Part 2
-current_key = 5
-current_row = 2
-current_col = 0
-passcode = ""
+    for instruction in instructions:
+        for direction in instruction:
+            current_row, current_col = request_move(current_row + MOVES[direction][0], current_col + MOVES[direction][1], current_row, current_col, board_size, keyboard)
+        passcode += str(keyboard[current_row][current_col])
 
-for instruction in instructions:
-    for direction in instruction:
-        current_row, current_col = request_move(current_row + MOVES[direction][0], current_col + MOVES[direction][1], current_row, current_col, 4, KEYBOARD2)
-    passcode += str(KEYBOARD2[current_row][current_col])
+    print("Final answer for Part %d: %s" % (part, passcode))
 
-print("Final answer for Part 2: %s" % (passcode))

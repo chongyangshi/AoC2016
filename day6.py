@@ -12,7 +12,7 @@ with open("inputs/day6-1.txt") as f:
     content = f.readlines()
 
 # Part 1, 2
-lines = map(str.strip, content)
+lines = list(map(str.strip, content))
 # Assuming all inputs with same length, initialise dict with positions.
 occurances = OrderedDict({key: {} for key in range(len(lines[0]))})
 
