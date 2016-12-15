@@ -34,7 +34,7 @@ while True:
     positions = list(map(lambda x: get_position(
         x[0], x[1], discs.index(x) + 1, time), discs))
 
-    if all(x == 0 for x in positions[:-1]) and (positions[-1] != 0) and not part_one_found:
+    if all(x == 0 for x in positions[:-1]) and not part_one_found:
         print("Final answer for Part 1: %d" % (time))
         part_one_found = True
 
