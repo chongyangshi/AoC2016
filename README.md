@@ -9,3 +9,4 @@ There are a few solutions that are not nearly instant. Below is a current known 
 * `day11.py`: a complex breadth-first search problem which requires extensive branch pruning, and my pruning is not fully done, therefore Part 2 can take up to an hour to run on a mid-range computer.
 * `day12.py`: Part 2 has the assembly interpreter going through a far greater magnitude of loops, takes a minute to run.
 * `day14.py`: again requires a lot of MD5 operations, especially Part 2. All together it takes a few minutes to run.
+* `day15.py`: a lot of iterations for Part 2, taking a few tens of seconds.
