@@ -10,3 +10,4 @@ There are a few solutions that are not nearly instant. Below is a current known 
 * `day12.py`: Part 2 has the assembly interpreter going through a far greater magnitude of loops, takes a minute to run.
 * `day14.py`: again requires a lot of MD5 operations, especially Part 2. All together it takes a few minutes to run.
 * `day15.py`: a lot of iterations for Part 2, taking a few tens of seconds.
+* `day16.py`: same as above for Part 2, taking half a minute.
