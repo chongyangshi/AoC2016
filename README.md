@@ -11,3 +11,4 @@ There are a few solutions that are not nearly instant. Below is a current known 
 * `day14.py`: again requires a lot of MD5 operations, especially Part 2. All together it takes a few minutes to run.
 * `day15.py`: a lot of iterations for Part 2, taking a few tens of seconds.
 * `day16.py`: same as above for Part 2, taking half a minute.
+* `day18.py`: same as above for Part 2, taking half a minute.
