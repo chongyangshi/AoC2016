@@ -12,3 +12,4 @@ There are a few solutions that are not nearly instant. Below is a current known 
 * `day15.py`: a lot of iterations for Part 2, taking a few tens of seconds.
 * `day16.py`: same as above for Part 2, taking half a minute.
 * `day18.py`: same as above for Part 2, taking half a minute.
+* `day19.py`: just terrible.
