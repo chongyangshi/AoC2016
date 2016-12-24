@@ -14,3 +14,4 @@ There are a few solutions that are not nearly instant. Below is a current known 
 * `day18.py`: same as above for Part 2, taking half a minute.
 * `day19.py`: just terrible.
 * `day22.py`: First stage of Part 2 is a pretty stupid BFS, with second stage calculatable in most cases. The whole script took around 3 minutes on an E3-1230v2.
+* `day24.py`: **I do not recommend running this unless on a non-server**, takes a dozen of hours to run this, probably attempting the problem in entirely the wrong way.
