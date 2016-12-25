@@ -10,6 +10,7 @@ from copy import deepcopy
 
 ORIGIN = '0'
 
+
 def get_neighbours(current_map, pos, max_x, max_y):
 
     neighbours = []
@@ -35,8 +36,10 @@ def heuristics_test(current_map, current, next, positions, found_positions, curr
     all_positions = list(positions.values())
     found_positions = [positions[i] for i in found_positions]
     remaining_positions = set(all_positions) - set(found_positions)
-    total_distance_current = sum([abs(i[0] - current[0]) + abs(i[1] - current[1]) for i in remaining_positions])
-    total_distance_next = sum([abs(i[0] - next[0]) + abs(i[1] - next[1]) for i in remaining_positions])
+    total_distance_current = sum(
+        [abs(i[0] - current[0]) + abs(i[1] - current[1]) for i in remaining_positions])
+    total_distance_next = sum(
+        [abs(i[0] - next[0]) + abs(i[1] - next[1]) for i in remaining_positions])
     if (depth_factor_current + total_distance_current) < (depth_factor_next + total_distance_next):
         return True
     else:
@@ -47,7 +50,8 @@ with open("inputs/day24-1.txt") as f:
     content = f.readlines()
 
 lines = list(map(str.strip, content))
-vent_map = [[lines[j][i] for i in range(len(lines[0]))] for j in range(len(lines))]
+vent_map = [[lines[j][i]
+             for i in range(len(lines[0]))] for j in range(len(lines))]
 max_x = len(vent_map[0])
 max_y = len(vent_map)
 max_depth = 100
@@ -81,7 +85,8 @@ while len(target_queue) > 0:
     if (position_char in positions):
         if (position_char not in pos_found):
 
-            print("Found {} at a distance of {}.".format(position_char, current_dep))
+            print("Found {} at a distance of {}.".format(
+                position_char, current_dep))
             new_pos_found = pos_found[:]
             new_pos_found.append(position_char)
 
@@ -108,4 +113,5 @@ while len(target_queue) > 0:
         for neighbour in neighbours:
             if heuristics_test(vent_map, current_pos, neighbour, positions, new_pos_found, current_dep):
                 if neighbour not in positions_visited:
-                    target_queue.append([neighbour, current_dep + 1, new_pos_found])
+                    target_queue.append(
+                        [neighbour, current_dep + 1, new_pos_found])
