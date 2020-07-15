@@ -3,7 +3,7 @@
 #                  Much bounce    #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 

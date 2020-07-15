@@ -3,7 +3,7 @@
 #                  Much craze     #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 REQUIRED_LENGTHS = [272, 35651584]

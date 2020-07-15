@@ -3,7 +3,7 @@
 #                  Much End       #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 MINIMUM_IDENTIFIER = "01010101"

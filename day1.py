@@ -3,7 +3,7 @@
 #                  Much WoW       #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 DIRECTIONS = ['N', 'E', 'S', 'W']

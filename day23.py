@@ -3,7 +3,7 @@
 #                  Much repeat    #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 ADD_LOOP = ["cpy", "inc", "dec", "jnz", "dec", "jnz"]

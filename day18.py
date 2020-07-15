@@ -3,7 +3,7 @@
 #                  Much easy      #
 #       Very Doge                 #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 ###################################
 
 ROWS = [40, 400000]

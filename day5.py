@@ -3,7 +3,7 @@
 #                  Much Collision #
 #       Very Movie Doge           #
 ###################################
-# By icydoge <icydoge@gmail.com>  #
+# By C Shi <icydoge@gmail.com>  #
 # Adapted from Day 4 of 2015.     #
 ###################################
 
